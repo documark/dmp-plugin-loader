@@ -1,17 +1,17 @@
-var fs   = require('fs');
-var path = require('path');
+var exists = require('fs').existsSync;
+var join   = require('path').join;
 
-module.exports = function pluginLoader ($, document, cb) {
-	var plugins = document.plugins();
+module.exports = function documarkPluginLoader ($, document, done) {
+	var plugins = [];
 
 	$('import').each(function () {
 		var $this  = $(this);
 		var plugin = $this.text();
 
-		// Check if ./plugins/<name>(/index).js exists, then use this instead
-		var localPlugin = path.join(document.path(), 'plugins', plugin);
+		// Use package <document root>/plugins/<name> if it exists
+		var localPlugin = join(document.path(), 'plugins', plugin);
 
-		if (fs.existsSync(localPlugin)) {
+		if (exists(localPlugin)) {
 			plugin = localPlugin;
 		}
 
@@ -19,5 +19,5 @@ module.exports = function pluginLoader ($, document, cb) {
 		$this.remove();
 	});
 
-	cb();
+	document.applyPlugins($, plugins, done);
 };

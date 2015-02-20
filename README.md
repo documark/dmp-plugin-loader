@@ -11,14 +11,20 @@ Documark plugin for loading plugins with ease!
 	  - documark-plugin-loader
 	```
 
-2. Load (local) plugins with an `import` element. Add this to your `document.jade`:
+2. Import plugins in your `document.jade`:
 
 	```jade
+	---
+	title: Document
+	---
+
 	import my-plugin
-	// This attempts to load:
-	//   - ./plugins/my-plugin.js
-	//   - ./plugins/my-plugin/index.js
-	//   - my-plugin (as local or global Node module)
 	```
 
-	
+3. The plugin loader will then find all `import` elements and use their text as plugin name.
+
+4. If the file or folder `./plugins/my-plugin` exists (relative to your document root), it will be loaded as a Node module (`require('/path/to/plugins/my-plugin');`). Else the plugin name will be loaded (`require('my-plugin');`).
+
+	See [Node modules, LOAD_AS_FILE and LOAD_AS_DIRECTORY][require-steps] for more information.
+
+[require-steps]: http://nodejs.org/api/modules.html#modules_all_together
