@@ -1,7 +1,7 @@
 var exists = require('fs').existsSync;
 var join   = require('path').join;
 
-module.exports = function documarkPluginLoader ($, document, done) {
+module.exports = function dmpPluginLoader ($, document, done) {
 	var plugins = [];
 
 	$('import').each(function () {
