@@ -1,6 +1,6 @@
 {
   "name": "dmp-plugin-loader",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Documark plugin for loading plugins with ease!",
   "main": "index.js",
   "repository": {
