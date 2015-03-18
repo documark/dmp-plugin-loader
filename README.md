@@ -1,7 +1,7 @@
 # Documark Plugin Loader
 
 [![npm version](https://badge.fury.io/js/dmp-plugin-loader.svg)](http://badge.fury.io/js/dmp-plugin-loader)
-[![dependency status](https://david-dm.org/mauvm/dmp-plugin-loader.svg)](https://david-dm.org/mauvm)
+[![dependency status](https://david-dm.org/documark/dmp-plugin-loader.svg)](https://david-dm.org/documark/dmp-plugin-loader)
 
 > Documark plugin for loading plugins with ease!
 

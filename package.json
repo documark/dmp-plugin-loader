@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mauvm/dmp-plugin-loader.git"
+    "url": "https://github.com/documark/dmp-plugin-loader.git"
   },
   "keywords": [
     "documark",
@@ -16,7 +16,7 @@
   "author": "Maurits van Mastrigt <maurits@nerdieworks.nl>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mauvm/dmp-plugin-loader/issues"
+    "url": "https://github.com/documark/dmp-plugin-loader/issues"
   },
-  "homepage": "https://github.com/mauvm/dmp-plugin-loader"
+  "homepage": "https://github.com/documark/dmp-plugin-loader"
 }
